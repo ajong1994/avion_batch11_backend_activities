@@ -1,12 +1,12 @@
 #1
 array = [1,2,3,4,5,6,7,8,9,10]
-array.each { |a| puts "Number is: #{a}" }
+array.each { |a| puts "#1 Number is: #{a}" }
 
 #2
 h = {a:1,b:2,c:3,d:4}
-puts h[:b]
+puts "\n#2a The value of key:b is: #{h[:b]}"
 h[:e] = 5
-puts h
+puts "#2b The new hash is: #{h}"
 
 #3
 @contact_data = [["john@email.com","123 Main st.", "555-123-4567"],
@@ -22,10 +22,10 @@ end
 contact_assigner("John Cruz",0)
 contact_assigner("Avion School",1)
 
-puts @contacts
+puts "\n#3 Adding array nodes to empty hash values: #{@contacts}"
 
 #4
-puts "How old are you?"
+puts "\n#4 Age incrementing: How old are you?"
 age = gets.chomp.to_i
 i = 1
 while i < 5 
@@ -34,7 +34,7 @@ while i < 5
 end
 
 #Coding exercise
-puts "What number will you check?"
+puts "\nCoding Exercise - check if number is a perfect square : What number will you check?"
 nm = gets.chomp.to_i
 limit = Math.log(nm,2).round()
 is_integer = false
@@ -43,4 +43,4 @@ for x in 1..limit
         is_integer = true
     end
 end
-puts is_integer
+puts "Coding exercise result: Is number a perfect square? #{is_integer}"
