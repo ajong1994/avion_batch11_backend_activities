@@ -1,0 +1,35 @@
+create table students2 (
+    id serial PRIMARY KEY,
+    name character varying(50),
+    course character varying(50),
+    age numeric
+);
+
+insert into Students2 (name, course, age)
+values('Aji', 'BusinessAd', 27);
+
+insert into Students2 (name, course, age)
+values('Johann', 'CS', 22);
+
+insert into Students2 (name, course, age)
+values('Marielle', 'Applied Math', 23);
+
+insert into Students2 (name, course, age)
+values('Tirso', 'Acting', 33);
+
+insert into Students2 (name, course, age)
+values('Rachel', 'Architecture', 20);
+
+select * from students2 order by age desc;
+
+select avg(age) from students2;
+
+select sum(age) from students2;
+
+select * from students2 where age > 25 and age < 33;
+
+update students2 set course='Millenialogy' where id = 1;
+
+delete from students2 where age > 30;
+
+select * from students2 where age < 20;
